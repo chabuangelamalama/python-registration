@@ -128,3 +128,21 @@ def update_course(id:int , course: Course):
            course.trainer
        ) 
        return{"message": "Course updated"}
+
+
+
+
+@app.delete("/students/{student_id}")
+def delete_student(student_id: int):
+    delete_student(student_id)
+    return {"message":f"Student with ID {student_id} deleted successfully"}
+
+@app.delete("/teachers/{teacher_id}")
+def delete_teacher(teacher_id: int):
+    delete_teacher(teacher_id)
+    return {"message": f"Teacher with ID {teacher_id} deleted successfully"}
+
+@app.delete("/courses/{course_id}")
+def delete_course(course_id: int):
+    delete_course(course_id)
+    return {"message": f"Course with ID {course_id} deleted successfully"}
